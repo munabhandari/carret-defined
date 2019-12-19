@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>child defined</title>
+	<style type="text/css">
+	div{width: 250px; height: 300px; float: left; position: relative;}
+	div:nth-child(odd){background: green;}
+	div:nth-child(even){background: red;}
+	div:nth-child(odd):after{content: ''; position: absolute; top: 40%; right: 0; border-width: 20px; border-style: solid; border-color: transparent pink transparent transparent;}	
+	div:nth-child(even):after{content: ''; position: absolute; top: 40%; right: 0; border-width: 20px; border-style: solid;
+		border-color: transparent pink transparent transparent;}
+	div:nth-child(even):before{content: ''; position: absolute; top: 40%; left: 0; border-width: 20px; border-style: solid;
+		border-color: transparent transparent transparent pink;}
+	div:nth-child(odd):before{content: ''; position: absolute; top: 40%; left: 0; border-width: 20px; border-style:  solid;
+		border-color: transparent transparent transparent pink; }
+	div:first-child:before{content: ''; position: absolute; top: 40%; left: 0; border-width: 20px; border-style:  solid;
+		border-color: transparent transparent transparent transparent;}
+	div:last-child:after{content: ''; top: 40%; right: 0; border-width: 20px; border-style: solid; border-color: transparent transparent transparent transparent; position: absolute;}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>
